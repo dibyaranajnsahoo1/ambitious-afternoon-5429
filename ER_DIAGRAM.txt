@@ -1,0 +1,115 @@
+
+MANGREGA MANAGEMENT DATA :
+========================
+
+
+
+create table GramPanchayat(
+gpid int Primary Key auto_increment,
+gName varchar(20) not null,
+gAddress varchar(20) not null,
+gMail varchar(30) not null unique,
+gphone varchar(10) not null unique,
+gpassword varchar(8) not null
+);
+
+
+mysql> desc GramPanchayat;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| gpid      | int         | NO   | PRI | NULL    | auto_increment |
+| gName     | varchar(20) | NO   |     | NULL    |                |
+| gAddress  | varchar(20) | NO   |     | NULL    |                |
+| gMail     | varchar(30) | NO   | UNI | NULL    |                |
+| gphone    | varchar(10) | NO   | UNI | NULL    |                |
+| gpassword | varchar(8)  | NO   |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+
+
+
+
+
+
+create table Project(
+pid int Primary Key auto_increment,
+pgpid int,
+pName varchar(20) not null,
+pcost int not null,
+pduration int not null,
+foreign key (pgpid) references GramPanchayat(gpid)
+);
+
+
+
+
+mysql> desc Project;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| pid       | int         | NO   | PRI | NULL    | auto_increment |
+| pgpid     | int         | YES  | MUL | NULL    |                |
+| pName     | varchar(20) | NO   |     | NULL    |                |
+| pcost     | int         | NO   |     | NULL    |                |
+| pduration | int         | NO   |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+
+
+
+
+
+
+create table Employee(
+eid int Primary Key auto_increment,
+egpid int,
+epid int,
+ename varchar(20) not null,
+eaddress varchar(20) not null,
+edate_joined date not null,
+ewage int not null,
+foreign key (epid) references Project(pid),
+foreign key (egpid) references GramPanchayat(gpid)
+);
+
+
+
+
+mysql> desc Employee;
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| eid          | int         | NO   | PRI | NULL    | auto_increment |
+| egpid        | int         | YES  | MUL | NULL    |                |
+| epid         | int         | YES  | MUL | NULL    |                |
+| ename        | varchar(20) | NO   |     | NULL    |                |
+| eaddress     | varchar(20) | NO   |     | NULL    |                |
+| edate_joined | date        | NO   |     | NULL    |                |
+| ewage        | int         | NO   |     | NULL    |                |
++--------------+-------------+------+-----+---------+----------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
