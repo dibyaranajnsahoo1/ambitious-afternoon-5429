@@ -10,7 +10,7 @@ import com.masai.exception.*;
 import com.masai.model.*;
 
 public class CreateEmployeeUseCase {
-//	public static int loginID = GPMImplementation.storedGpmID;
+/
 	public static void createEmployee() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class CreateEmployeeUseCase {
 			int wage = sc.nextInt();
 			
 			Employee e = new Employee();
-			e.setEgpid(GpmDaoImpl.storedGpmID);
+			e.setEgpid(GpmDaoImpl.PutGpmID);
 			e.setEaddress(address);
 			e.setEname(name);
 			e.setEwage(wage);

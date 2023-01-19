@@ -4,7 +4,6 @@ MANGREGA MANAGEMENT DATA :
 
 
 
-
 create table GramPanchayat(
 gpid int Primary Key auto_increment,
 gName varchar(20) not null,
