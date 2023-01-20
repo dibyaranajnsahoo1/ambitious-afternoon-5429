@@ -14,6 +14,9 @@ import com.masai.exception.ProjectException;
 public class AllocateProjectToGPMUseCase {
 	
 	public static void allocateProjectToGPM() {
+//	public static void main(String[] args) {
+		
+	
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Project ID to assign : ");

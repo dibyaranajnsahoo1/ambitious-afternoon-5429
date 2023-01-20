@@ -16,11 +16,12 @@ public class CreateGramPanchayatMemberUseCase {
 	public static boolean flag = false;
 	
 	public static void createGramPanchayatMember()  {
+
+		
+	
 		
 		Scanner sc = new Scanner(System.in);
 		
-//		List<Character> specialCharList = Arrays.asList('~','!','@','#','$','%','^','&','*','_','-','+','=','/','<','>','?',',','`');
-//		List<Integer> integerList = Arrays.asList(0,1,2,3,4,5,6,7,8,9);
 		
 		
 		try {
@@ -30,12 +31,14 @@ public class CreateGramPanchayatMemberUseCase {
 			String name = sc.nextLine();
 			System.out.println("Enter Gram Panchayat Member Address : ");
 			String address = sc.nextLine();
+			System.out.println("Enter Gram panchayat Member Email");
+			String mail =sc.next();
 			System.out.println("Enter Gram Panchayat Member Phone Number : ");
 			long phNumber = sc.nextLong();
 			sc.nextLine();
 			String phone = Long.toString(phNumber);
 			System.out.println("Enter Gram Panchayat Member Password : ");
-			System.out.println(ConsoleColors.BLUE_ITALIC+"(Password must contain 8 characters and should have atleast 1 Upper Case, 1 Small Case, 1 Number and 1 Special Character)"+ ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_ITALIC+"(Password must contain 8 characters , Have 1 Upper Case, 1 Small Case, 1 Number and 1 Special Character)"+ ConsoleColors.RESET);
 			boolean flag = false;
 			String password = null;
 			while(!flag) {
@@ -54,7 +57,9 @@ public class CreateGramPanchayatMemberUseCase {
 			GramPanchayat g = new GramPanchayat();
 			g.setGname(name);
 			g.setAddress(address);
+			g.setGmail(mail);
 			g.setGphone(phone);
+			
 			g.setPassword(password);
 			
 			BdoDao dao = new BdoImplementation();
@@ -74,7 +79,7 @@ public class CreateGramPanchayatMemberUseCase {
 		}
 		
 		
-		//sc.close();
+		
 		
 		
 	}

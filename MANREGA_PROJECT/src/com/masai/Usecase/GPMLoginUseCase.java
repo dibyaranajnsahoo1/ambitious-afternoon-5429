@@ -12,6 +12,9 @@ public class GPMLoginUseCase {
 	//public static int gpmID=GPMImplementation.getGpmID();
 	
 	public static boolean gpmLogin() {
+//	public static void main(String[] args) {
+		
+	
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Registered Phone Number to LogIn : ");

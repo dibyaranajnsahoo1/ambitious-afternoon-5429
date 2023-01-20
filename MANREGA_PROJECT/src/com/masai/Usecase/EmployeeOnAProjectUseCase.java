@@ -11,9 +11,12 @@ import com.masai.model.*;
 public class EmployeeOnAProjectUseCase {
 	
 	public static void employeeOnAProject() {
+//	public static void main(String[] args) {
+		
+	
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Project ID to see the list of all employeein that project : ");
+		System.out.println("Enter Project ID to see the list of all employeein that project  ");
 		int pid = sc.nextInt();
 		
 		
@@ -26,14 +29,17 @@ public class EmployeeOnAProjectUseCase {
 			
 			System.out.println("-------------------------------------------------------------");
 			
-			System.out.printf("%17s %10.5s %19s",ConsoleColors.BLACK_BOLD + "EID","NAME","WAGE/DAY"  +ConsoleColors.RESET);
 			System.out.println();
-			System.out.print("-------------------------------------------------------------");
 			
 			System.out.println();
 			for(Employee e : emp) {
 				
-				System.out.format("%9.2s %13s %10s",e.getEid(),e.getEname(),e.getEwage());
+				System.out.print(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"EID - "+e.getEid()+ConsoleColors.RESET);
+
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"NAME - "+e.getEname()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"WAGE/DAY - "+e.getEwage()+ConsoleColors.RESET);
+				
+				
 				System.out.println();
 			}
 			

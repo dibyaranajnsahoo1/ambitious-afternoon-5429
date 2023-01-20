@@ -6,23 +6,44 @@ import com.masai.dao.*;
 import com.masai.exception.*;
 import com.masai.model.*;
 
-public class BdoMain {
+public class BDOMain {
 	
+	
+	//BDO login--------------------------------------
 	public static Boolean bdoLogin() {
-		BdoLoginUseCase login = new BdoLoginUseCase();
-		Boolean result = login.bdoLogin();
+		BdoLoginUseCase Login = new BdoLoginUseCase();
+		Boolean result = Login.bdoLogin();
 		return result;	
 	}
 	
+	
+	//BDO Home---------------------------------------- 
 	public static void bdoHomeWndow() {
-		System.out.println(ConsoleColors.BROWN_BACKGROUND+ConsoleColors.WHITE_BOLD_BRIGHT+"Welcome to BDO Home Window : "+ ConsoleColors.RESET);
-		System.out.println("Press 1 to"+ConsoleColors.PURPLE_BOLD_BRIGHT +" Create a Project." + ConsoleColors.RESET);
-		System.out.println("Press 2 to"+ConsoleColors.PURPLE_BOLD_BRIGHT +" View List of all Projects." + ConsoleColors.RESET);
-		System.out.println("Press 3 to"+ConsoleColors.PURPLE_BOLD_BRIGHT +" Create a Gram Panchayat Member." + ConsoleColors.RESET);
-		System.out.println("Press 4 to"+ConsoleColors.PURPLE_BOLD_BRIGHT+" View List of all Gram Panchayat Members ." + ConsoleColors.RESET);
-		System.out.println("Press 5 to"+ConsoleColors.PURPLE_BOLD_BRIGHT +" Allocate Project to Gram Panchayat Member." + ConsoleColors.RESET);
-		System.out.println("Press 6 to"+ConsoleColors.PURPLE_BOLD_BRIGHT +" See the List of Employee working on a project" + ConsoleColors.RESET);
-		System.out.println("Press 7 to"+ConsoleColors.PURPLE_BOLD_BRIGHT +" LOGOUT AND RETURN TO HOMEPAGE" + ConsoleColors.RESET);	
+		System.out.println(ConsoleColors.BLACK_BACKGROUND+ConsoleColors.WHITE_BOLD_BRIGHT+"||--- Welcome to BDO Home ---|| "+ ConsoleColors.RESET);
+		
+		System.out.println(ConsoleColors.YELLOW_BACKGROUND+ConsoleColors.BLACK_BOLD+"+-----------+-------------+------+-----+---------+----------------+\r\n"
+				+ "| Press 1 to Create a new Project                                 |\r\n"
+				+ "|                                                                 |\r\n"
+				+ "| Press 2 to View the List of all Projects                        |\r\n"
+				+ "|                                                                 |\r\n"
+				+ "| Press 3 to Create a Gram Panchayat Member                       |\r\n"
+				+ "|                                                                 |\r\n"
+				+ " Press 4 to View List of all Gram Panchayat Member               |\r\n"
+				+ "|                                                                 |\r\n"
+				+ " Press 5 to Allocate Project to Gram Panchayat Member            |\r\n"
+				+ "|                                                                 |\r\n"
+				+ " Press 6 to See the List of Employee working on a project        |\r\n"
+				+ "|                                                                 |\r\n"
+				+ " Press 7 to LOGOUT AND RETURN TO HOMEPAGE                        |\r\n"
+				+ "                                                                | |\r\n"
+				+ "+                                                                 +\r\n"
+				+ "|                                                                 |\r\n"
+				+ "|                                                                 | \r\n"
+				+ "+-----------+-------------+------+-----+---------+----------------+"+ConsoleColors.RESET);
+		
+		
+		
+		
 	}
 	
 	public static void createProject() {

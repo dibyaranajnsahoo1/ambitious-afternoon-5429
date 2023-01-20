@@ -11,6 +11,9 @@ public class DisplayAllGramPayanchayatMemberUseCase {
 	
 	
 	public static void displayAllGPM() {
+//	public static void main(String[] args) {
+		
+	
 		
 		BdoDao dao = new BdoImplementation();
 		
@@ -22,14 +25,19 @@ public class DisplayAllGramPayanchayatMemberUseCase {
 			
 			System.out.println("---------------------------------------------------------------------");
 			
-			System.out.printf("%7s %12s %16s %12.5s %19s",ConsoleColors.BLACK_BOLD + "GPID", "NAME", "ADDRESS", "PHONE", "PASSWORD" + ConsoleColors.RESET);
 			System.out.println();
-			System.out.print("---------------------------------------------------------------------");
-			
+						
 			System.out.println();
 			for(GramPanchayat g : gpmList) {
 				
-				System.out.format("%2s %15s %14s %15s %14s",g.getGpid(),g.getGname(),g.getAddress(),g.getGphone(),g.getPassword());
+				System.out.print(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"GPID - "+g.getGpid()+ConsoleColors.RESET);
+
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"NAME - "+g.getGname()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"ADDRESS - "+g.getAddress()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"GMAIL - "+g.getGmail()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"PHONE - "+g.getGphone()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"PASSWORD - "+g.getPassword()+ConsoleColors.RESET);
+				
 				System.out.println();
 			}
 			
