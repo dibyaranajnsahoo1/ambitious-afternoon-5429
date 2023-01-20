@@ -10,28 +10,30 @@ import com.masai.exception.*;
 import com.masai.model.*;
 
 public class CreateEmployeeUseCase {
-//	public static int loginID = GPMImplementation.storedGpmID;
+
 	public static void createEmployee() {
+//	public static void main(String[] args) {
+		
+	
 		
 		Scanner sc = new Scanner(System.in);
 		
 		try {
 			
 			
-			System.out.println("Enter Employee Name : ");
+			System.out.println("Enter Employee Name ");
 			String name = sc.nextLine();
 			
-			System.out.println("Enter Employee Address : ");
+			System.out.println("Enter Employee Address ");
 			String address = sc.nextLine();
-			System.out.println("Enter Employee Wage/day : ");
+			System.out.println("Enter Employee Wage/day ");
 			int wage = sc.nextInt();
 			
 			Employee e = new Employee();
-			e.setEgpid(GpmDaoImpl.storedGpmID);
+			e.setEgpid(GpmDaoImpl.PutGpmID);
 			e.setEaddress(address);
 			e.setEname(name);
 			e.setEwage(wage);
-			//System.out.println(e);
 			GPMInterface dao = new GpmDaoImpl();
 			String result;
 			
@@ -46,7 +48,7 @@ public class CreateEmployeeUseCase {
 			}
 			
 		} catch (InputMismatchException i) {
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "Exception : Invalid Input Data Type" + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "Invalid Input Data Type" + ConsoleColors.RESET);
 		}
 		
 

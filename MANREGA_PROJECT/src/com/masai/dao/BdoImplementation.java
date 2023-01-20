@@ -26,10 +26,10 @@ public class BdoImplementation implements BdoDao {
 	@Override
 	public String bdologin(String username, String password) throws CredentialException {
 		
-		String result = "------Invalid Username or Password. Enter Right Details.!-------";
+		String result = "|------Invalid Username or Password. Enter Right Details.!-------|";
 		
 		if (username.equals(BdoDao.username) && password.equals(BdoDao.password)) {
-			 result = "------Bdo Account Login Successful!----------";
+			 result = "|------Bdo Account Login Successful!----------|";
 		}else {
 			throw new CredentialException(result);
 		}
