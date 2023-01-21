@@ -18,11 +18,7 @@ public class CreateGramPanchayatMemberUseCase {
 	public static void createGramPanchayatMember()  {
 
 		
-	
-		
-		Scanner sc = new Scanner(System.in);
-		
-		
+	Scanner sc = new Scanner(System.in);
 		
 		try {
 			
@@ -43,17 +39,14 @@ public class CreateGramPanchayatMemberUseCase {
 			String password = null;
 			while(!flag) {
 				password = sc.nextLine();
-				flag = password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$");
-				
+				flag = password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,20}$");
 				if(flag) {
 					break;
 				}
 				System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "Invalid Password Pattern" + ConsoleColors.RESET);
-				System.out.println(ConsoleColors.RED_ITALIC+"(Password must contain 8 characters and should have atleast 1 Upper Case, 1 Small Case, 1 Number and 1 Special Character)"+ ConsoleColors.RESET);
+				System.out.println(ConsoleColors.RED_ITALIC+"(Password must contain 8 characters and should have atleast 1 Upper Case, 1 Small Case, 1 Number)"+ ConsoleColors.RESET);
 			}
-			
-			
-			
+		
 			GramPanchayat g = new GramPanchayat();
 			g.setGname(name);
 			g.setAddress(address);
@@ -68,14 +61,14 @@ public class CreateGramPanchayatMemberUseCase {
 			
 			try {
 				result = dao.createGramPanchayatMember(g);
-				System.out.println(ConsoleColors.GREEN_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+				System.out.println(ConsoleColors.BANANA_YELLOW_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 			} catch (GramPanchayatException e) {
 				result = e.getMessage();
-				System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+				System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 			}	
 			
 		} catch (InputMismatchException e) {
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "Exception : Invalid Input Data Type" + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + "-- Invalid Input Data Type--" + ConsoleColors.RESET);
 		}
 		
 		

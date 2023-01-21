@@ -19,9 +19,9 @@ public class AllocateProjectToGPMUseCase {
 	
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Project ID to assign : ");
+		System.out.println("Enter PID to assign - ");
 		int pid = sc.nextInt();
-		System.out.println("Enter Gram Panchayat Member ID to assign : ");
+		System.out.println("Enter GpmID to assign - ");
 		int gpid = sc.nextInt();
 		
 		BdoDao dao = new BdoImplementation();
@@ -29,20 +29,20 @@ public class AllocateProjectToGPMUseCase {
 		
 		try {
 			result = dao.allocateProjectToGPM(gpid, pid);
-			System.out.println(ConsoleColors.GREEN_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.BANANA_YELLOW_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 		} catch (ProjectException e) {
 			
 			result = e.getMessage();
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 			
 		} catch (GramPanchayatException e) {
 			
 			result = e.getMessage();
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 			
 		} catch (BdoException e) {
 			result = e.getMessage();
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 		}
 		
 		

@@ -30,7 +30,7 @@ public class DisplayAllGramPayanchayatMemberUseCase {
 			System.out.println();
 			for(GramPanchayat g : gpmList) {
 				
-				System.out.print(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"GPID - "+g.getGpid()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"GPID - "+g.getGpid()+ConsoleColors.RESET);
 
 				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"NAME - "+g.getGname()+ConsoleColors.RESET);
 				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"ADDRESS - "+g.getAddress()+ConsoleColors.RESET);
@@ -43,7 +43,7 @@ public class DisplayAllGramPayanchayatMemberUseCase {
 			
 			System.out.println("---------------------------------------------------------------------");
 		} catch (GramPanchayatException e) {
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + e.getMessage() + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + e.getMessage() + ConsoleColors.RESET);
 		}
 		
 		

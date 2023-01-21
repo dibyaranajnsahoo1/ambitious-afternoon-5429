@@ -12,7 +12,5 @@ public class CredentialException extends Exception {
 	
 	}
 	
-	
-	
 
 }

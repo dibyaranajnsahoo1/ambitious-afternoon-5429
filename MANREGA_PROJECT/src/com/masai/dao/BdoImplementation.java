@@ -26,10 +26,10 @@ public class BdoImplementation implements BdoDao {
 	@Override
 	public String bdologin(String username, String password) throws CredentialException {
 		
-		String result = "|------Invalid Username or Password. Enter Right Details.!-------|";
+		String result = "|||------Invalid Username or Password. Enter Right Details.-------||||";
 		
 		if (username.equals(BdoDao.username) && password.equals(BdoDao.password)) {
-			 result = "|------Bdo Account Login Successful!----------|";
+			 result = "|||------BDO Account Login Successful!----------|||";
 		}else {
 			throw new CredentialException(result);
 		}
@@ -59,7 +59,7 @@ public class BdoImplementation implements BdoDao {
 			int x = ps.executeUpdate();
 			
 			if(x>0) {
-				result = "---Project Created Succsessfully---.";
+				result = "---Project Created Succsessfully---";
 			}else {
 				throw new ProjectException(result);
 			}
@@ -104,7 +104,7 @@ public class BdoImplementation implements BdoDao {
 		}
 		
 		if(projectList.size() ==0) {
-			throw new ProjectException("---Have No Project Found---");
+			throw new ProjectException("---No Project Found---");
 		}
 		
 		return projectList;
@@ -135,7 +135,7 @@ public class BdoImplementation implements BdoDao {
 			int x = ps.executeUpdate();
 			
 			if(x>0) {
-				result = "GPM Data Inserted Sucsessfully";
+				result = "-GPM Data Inserted Sucsessfully-";
 			}else {
 				throw new GramPanchayatException(result);
 			}
@@ -154,7 +154,7 @@ public class BdoImplementation implements BdoDao {
 
 	@Override
 	public List<GramPanchayat> displayAllGramPayanchayatMember() throws GramPanchayatException {
-		List<GramPanchayat> GpmList = new ArrayList<>();
+		List<GramPanchayat> ListOfGpm = new ArrayList<>();
 		
 		try (Connection conn = DBUtility.provideConnection()){
 			
@@ -172,17 +172,17 @@ public class BdoImplementation implements BdoDao {
 				
 				
 				GramPanchayat gpmlist = new GramPanchayat(gpid, name,mail, address, phone, password);
-				GpmList.add(gpmlist);
+				ListOfGpm.add(gpmlist);
 			}
 		} catch (SQLException e) {
 			throw new GramPanchayatException(e.getMessage());
 		}
 		
-		if(GpmList.size() ==0) {
-			throw new GramPanchayatException("No Gram Panchayat Member Found Plz Try Again");
+		if(ListOfGpm.size() ==0) {
+			throw new GramPanchayatException("--No Gram Panchayat Member Found Plz Try Again--");
 		}
 		
-		return GpmList;
+		return ListOfGpm;
 		
 		
 	}
@@ -282,7 +282,7 @@ public class BdoImplementation implements BdoDao {
 				}
 				
 			}else {
-				throw new ProjectException("No Project found. Enter right PID " );
+				throw new ProjectException("--No Project found--" );
 			}
 		
 		} catch (SQLException e) {
@@ -290,7 +290,7 @@ public class BdoImplementation implements BdoDao {
 		}
 		
 		if(empList.size() ==0) {
-			throw new EmployeeException(" No Employee Found. Enter right PID ");
+			throw new EmployeeException(" --No Employee Found-- ");
 		}
 			
 		return empList;

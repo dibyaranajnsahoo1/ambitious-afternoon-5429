@@ -21,25 +21,22 @@ public class GPMLoginUseCase {
 		String phone = sc.nextLine();
 		System.out.println("Enter Password : ");
 		String password = sc.nextLine();
-		//sc.close();
 		GPMInterface dao = new GpmDaoImpl();
 		 
-		
-		
 		String result;
 		
 		try {
 			result= dao.gmpLogin(phone, password);
-			System.out.println(ConsoleColors.GREEN_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.BANANA_YELLOW_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 			return true;
 			
 		} catch (CredentialException e) {
 			result = e.getMessage();
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 			return false;
 		} catch (GramPanchayatException e) {
 			result = e.getMessage();
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 			return false;
 		}
 		

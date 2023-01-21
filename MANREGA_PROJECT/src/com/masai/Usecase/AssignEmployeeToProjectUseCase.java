@@ -14,9 +14,9 @@ public class AssignEmployeeToProjectUseCase {
 	public static void assignEmployeeToProject() {
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Project ID to assign : ");
+		System.out.println("Enter PID to assign - ");
 		int pid = sc.nextInt();
-		System.out.println("Enter Employee ID to assign : ");
+		System.out.println("Enter EID to assign : ");
 		int eid = sc.nextInt();
 		
 		
@@ -25,19 +25,19 @@ public class AssignEmployeeToProjectUseCase {
 		
 		try {
 			result = dao.assignEmployeeToProject(pid, eid);
-			System.out.println(ConsoleColors.GREEN_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.BANANA_YELLOW_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 		} catch (EmployeeException e) {
 			result = e.getMessage();
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 		} catch (ProjectException e) {
 			result = e.getMessage();
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 		} catch (GramPanchayatException e) {
 			result = e.getMessage();
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 		}
 		
-		//sc.close();
+		sc.close();
 		
 		
 	}

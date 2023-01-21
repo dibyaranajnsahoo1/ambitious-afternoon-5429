@@ -13,15 +13,14 @@ import com.masai.model.*;
 public class Main {
 	
 	
-public static void appOpening() throws InputMismatchException  {
+public static void open() throws InputMismatchException  {
 		
 
 		
 		try {
 			Scanner sc = new Scanner(System.in);
-//			System.out.println("");
 			System.out.println(ConsoleColors.YELLOW_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD_BRIGHT+
-					              "--- Welcome to GRAM MGNREGA Application --- "+ ConsoleColors.RESET);
+					              "|||--- Welcome to GRAM MGNREGA Application ---|||"+ ConsoleColors.RESET);
 			System.out.println(ConsoleColors.DARK_BLUE_BACKGROUND+ConsoleColors.WHITE_BOLD+"+-----------+-------------+------+-----+---------+----------------+\r\n"
 					+ "|  Choose Any Option from Below According to your choice          |\r\n"
 					+ "+ =============================================================   +\r\n"
@@ -38,7 +37,6 @@ public static void appOpening() throws InputMismatchException  {
 		
 			if(choice.equals("1")) {
 				
-				//System.out.println("bdo");
 				BDOMain bmain = new BDOMain();
 				Boolean result = bmain.bdoLogin();
 				
@@ -46,11 +44,11 @@ public static void appOpening() throws InputMismatchException  {
 				
 				while(!result) {
 					count++;
-					System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + (4-count) +" Attempts remaining"+ ConsoleColors.RESET);
+					System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + (4-count) +" Times remaining []"+ ConsoleColors.RESET);
 					result = bmain.bdoLogin();
 					
-					if(count ==3 && result ==false) {
-						System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "You will cross your Attempts Try Again Later"+ ConsoleColors.RESET);
+					if(count == 3) {
+						System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "You will cross your Attempts Try Again Later thank you"+ ConsoleColors.RESET);
 						break;
 						
 					}
@@ -63,33 +61,33 @@ public static void appOpening() throws InputMismatchException  {
 						bmain.bdoHomeWndow();
 						String choiceBdo = sc.nextLine();
 						
-						if(choiceBdo.equals("1")) {
-							bmain.createProject();
-						}else if(choiceBdo.equals("2")) {
-							bmain.viewListOfProject();
-						}else if (choiceBdo.equals("3")) {
-							bmain.createGPM();
-						}else if(choiceBdo.equals("4")){
-							bmain.viewListOfGPM();
-						}else if(choiceBdo.equals("5")){
-							bmain.allocateProjectToGPM();
-						}else if(choiceBdo.equals("6")){
+						if(choiceBdo.equals("1")) bmain.createProject();
+							
+						else if(choiceBdo.equals("2")) bmain.viewListOfProject();
+							
+						else if (choiceBdo.equals("3")) bmain.createGPM();
+							
+						else if(choiceBdo.equals("4")) bmain.viewListOfGPM();
+							
+						else if(choiceBdo.equals("5")) bmain.allocateProjectToGPM();
+							
+						else if(choiceBdo.equals("6"))
 							bmain.listOfEmployee();
-						}else if(choiceBdo.equals("7")){
-							System.out.println(ConsoleColors.GREEN_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "--LOGOUT SUCCESSFUL --" + ConsoleColors.RESET);				
+						else if(choiceBdo.equals("7")){
+							System.out.println(ConsoleColors.GREEN_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "--LOGOUT SUCCESSFUL THANK YOU --" + ConsoleColors.RESET);				
 							break;
+							
 						}else {
-							System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "--CHOOSE 1 TO 7--" + ConsoleColors.RESET);
+							System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "--PLZ CHOOSE 1 TO 7--" + ConsoleColors.RESET);
 						}							
 					}
-					appOpening();
+					open();
 						
 				}else {
-					appOpening();
+					open();
 				}
 				
 			}else if(choice.equals("2")) {
-				//System.out.println("gpm");
 				GPMMain gpmMain = new GPMMain();
 				Boolean resultg = gpmMain.GpmLogin();
 				
@@ -114,25 +112,25 @@ public static void appOpening() throws InputMismatchException  {
 						
 						String choiceGpm = sc.nextLine();
 						
-						if(choiceGpm.equals("1")) {
-							gpmMain.createEmployee();
-						}else if(choiceGpm.equals("2")) {
-							gpmMain.displayEmployee();
-						}else if(choiceGpm.equals("3")) {
-							gpmMain.assignEmployee();
-						}else if(choiceGpm.equals("4")) {
-							gpmMain.dayWageTotal();
-						}else if(choiceGpm.equals("5")) {
+						if(choiceGpm.equals("1")) gpmMain.createEmployee();
+							
+						else if(choiceGpm.equals("2")) gpmMain.displayEmployee();
+							
+						else if(choiceGpm.equals("3")) gpmMain.assignEmployee();
+							
+						else if(choiceGpm.equals("4")) gpmMain.dayWageTotal();
+							
+						else if(choiceGpm.equals("5")) {
 							System.out.println(ConsoleColors.GREEN_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "--LOGOUT SUCCESSFUL --" + ConsoleColors.RESET);
 							break;
 						}else {
 							System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "--CHOOSE 1 TO 5--" + ConsoleColors.RESET);
 						}		
 					}
-					appOpening();
+					open();
 					
 				}else {
-					appOpening();
+					open();
 				}
 				
 				
@@ -142,7 +140,7 @@ public static void appOpening() throws InputMismatchException  {
 				
 			}else {
 				System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "--CHOOSE 1 TO 3--" + ConsoleColors.RESET);
-				appOpening();
+				open();
 				
 			}
 		
@@ -155,7 +153,7 @@ public static void appOpening() throws InputMismatchException  {
 		
 	}
 	public static void main(String[] args) {
-		appOpening();	
+		open();	
 		
 	}
 		
