@@ -31,7 +31,7 @@ public class DisplayAllProjectUseCase {
 				
 				
 				
-				System.out.print(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"PID - "+p.getPid()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"PID - "+p.getPid()+ConsoleColors.RESET);
 
 				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"NAME - "+p.getPname()+ConsoleColors.RESET);
 				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"COST - "+p.getPcost()+ConsoleColors.RESET);
@@ -43,7 +43,7 @@ public class DisplayAllProjectUseCase {
 			System.out.println("---------------------------------------------------------------------");
 	
 		} catch (ProjectException e) {
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + e.getMessage() + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + e.getMessage() + ConsoleColors.RESET);
 		}
 		
 		

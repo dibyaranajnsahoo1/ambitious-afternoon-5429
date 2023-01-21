@@ -38,14 +38,14 @@ public class GpmDaoImpl implements GPMInterface{
 				String pass = rs.getString("gpassword");
 				
 				if(phoneNumber.equals(phone) && pass.equals(password)) {
-					result = "|---login Sucessful---|";
+					result = "|---LOGIN Sucessful---|";
 					PutGpmID = rs.getInt("gpid");
 					return result;
 				}
 					
 					
 			}
-			result = "|---Wrong Information---|";
+			result = "|---Wrong Details---|";
 			throw new CredentialException(result);
 			
 		} catch (SQLException e) {
@@ -67,7 +67,7 @@ public class GpmDaoImpl implements GPMInterface{
 	@Override
 	public String createEmployee(Employee e) throws EmployeeException {
 		
-		String result ="|---Employee is Not Created.---|";
+		String result ="|---Employee is Not Create---|";
 		
 		try (Connection conn = DBUtility.provideConnection()){
 			
@@ -128,7 +128,7 @@ public class GpmDaoImpl implements GPMInterface{
 		}
 		
 		if(EmpList.size() ==0) {
-			throw new EmployeeException("Exception : No Employeet Found.");
+			throw new EmployeeException("--No Employee Availbale--");
 		}
 		
 		return EmpList;
@@ -173,12 +173,12 @@ public class GpmDaoImpl implements GPMInterface{
 					}
 					
 				}else {
-					throw new ProjectException("|---Project doesn't exist or NOT assinged to Logined GPM Account---|");
+					throw new ProjectException("|---Project doesn't exist ---|");
 				}
 				
 				
 			}else {
-				throw new EmployeeException("|--- employee don't exist or assigned by different Gram Panchayat Member ---|");
+				throw new EmployeeException("|--- employee don't exist ---|");
 			}
 			
 		
@@ -201,8 +201,8 @@ public class GpmDaoImpl implements GPMInterface{
 		
 		
 		try (Connection conn = DBUtility.provideConnection()) {
-			String ss = "select e.eid,e.ename,p.pid,p.pname,e.edate_joined,DATEDIFF(curdate(),edate_joined) days,e.ewage,DATEDIFF(curdate(),edate_joined)*e.ewage";
-			PreparedStatement ps = conn.prepareStatement("'"+ss+"'total from employee e inner join project p on e.epid = p.pid group by e.eid");
+//			String ss = "";
+			PreparedStatement ps = conn.prepareStatement("select e.eid,e.ename,p.pid,p.pname,e.edate_joined,DATEDIFF(curdate(),edate_joined) days,e.ewage,DATEDIFF(curdate(),edate_joined)*e.ewage total from employee e inner join project p on e.epid = p.pid group by e.eid");
 			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {
@@ -220,13 +220,10 @@ public class GpmDaoImpl implements GPMInterface{
 				dayandWageList.add(empWageTotal);	
 				
 			}
-			
-			
-			
+				
 		} catch (SQLException e) {
 			throw new EmployeeException(e.getMessage());
 		}
-		
 		
 		if(dayandWageList.size() ==0) {
 			throw new EmployeeException(" |---No employee Found---|");

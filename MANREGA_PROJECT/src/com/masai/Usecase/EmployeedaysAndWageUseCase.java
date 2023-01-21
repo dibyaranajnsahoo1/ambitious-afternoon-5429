@@ -10,6 +10,9 @@ import com.masai.model.*;
 public class EmployeedaysAndWageUseCase {
 	
 	public static void employeedaysAndWage() {
+//	public static void main(String[] args) {
+		
+	
 		
 		
 		GPMInterface dao = new GpmDaoImpl();
@@ -22,14 +25,24 @@ public class EmployeedaysAndWageUseCase {
 			
 			System.out.println("-------------------------------------------------------------------------------------------------------------------------");
 			
-			System.out.printf("%7s %10s %11s %17s %22s %17s %13s %21s",ConsoleColors.BLACK_BOLD + "EID", "ENAME", "PID", "PNAME", "DATE_JOINED", "TOTAL DAYS", "WAGE/DAY", "TOTAL_AMOUNT" + ConsoleColors.RESET);
 			System.out.println();
-			System.out.print("-------------------------------------------------------------------------------------------------------------------------");
 			
 			System.out.println();
 			for(Employee_Wage_Oper e : empWage) {
 				
-				System.out.format("%2s %12s %9s %22s %17s %14s %14s %18s",e.getEid(),e.getName(), e.getProjectID(),e.getProjectName(),e.getDate_joined(),e.getNoOfDays(),e.getWage(),e.getTotalAmount());
+				
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"EID - "+e.getEid()+ConsoleColors.RESET);
+
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"ENAME - "+e.getName()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"PID - "+e.getProjectID()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"PROJECTNAME - "+e.getProjectName()+ConsoleColors.RESET);
+
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"DATE_JOINED - "+e.getDate_joined()+ConsoleColors.RESET);
+
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"TOTAL DAYS - "+e.getNoOfDays()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"WAGE/DAY - "+e.getWage()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"TOTAL_AMOUNT - "+e.getTotalAmount()+ConsoleColors.RESET);
+				
 				System.out.println();
 			}
 			

@@ -28,7 +28,7 @@ public class DisplayAllEmployeeUseCase {
 			System.out.println();
 			for(Employee e : emp) {
 			
-				System.out.print(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"EID - "+e.getEid()+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"EID - "+e.getEid()+ConsoleColors.RESET);
 
 				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"EGPMID - "+e.getEgpid()+ConsoleColors.RESET);
 				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"EPID - "+e.getEpid()+ConsoleColors.RESET);
@@ -46,7 +46,7 @@ public class DisplayAllEmployeeUseCase {
 //       
 	
 		} catch (EmployeeException e) {
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + e.getMessage() + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + e.getMessage() + ConsoleColors.RESET);
 		}
 		
 		

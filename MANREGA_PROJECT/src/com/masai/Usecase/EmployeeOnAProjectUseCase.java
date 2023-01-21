@@ -25,7 +25,7 @@ public class EmployeeOnAProjectUseCase {
 		try {
 			List<Employee> emp =  dao.employeeOnAProject(pid);
 			
-			System.out.println("--" + ConsoleColors.PURPLE_BACKGROUND+ConsoleColors.YELLOW_BOLD_BRIGHT +"Table of all the Employee Present in the Project ID : " +pid + ConsoleColors.RESET+ "----");
+			System.out.println("--" + ConsoleColors.PURPLE_BACKGROUND+ConsoleColors.YELLOW_BOLD_BRIGHT +"Table of all the Employee Present in the PID : " +pid + ConsoleColors.RESET+ "----");
 			
 			System.out.println("-------------------------------------------------------------");
 			
@@ -44,8 +44,6 @@ public class EmployeeOnAProjectUseCase {
 			}
 			
 			System.out.println("-------------------------------------------------------------");
-			
-			
 			
 			
 		} catch (ProjectException e) {

@@ -21,12 +21,12 @@ public class CreateEmployeeUseCase {
 		try {
 			
 			
-			System.out.println("Enter Employee Name ");
+			System.out.println("Enter Employee Name -");
 			String name = sc.nextLine();
 			
-			System.out.println("Enter Employee Address ");
+			System.out.println("Enter Employee Address -");
 			String address = sc.nextLine();
-			System.out.println("Enter Employee Wage/day ");
+			System.out.println("Enter Employee Wage/day -");
 			int wage = sc.nextInt();
 			
 			Employee e = new Employee();
@@ -39,16 +39,16 @@ public class CreateEmployeeUseCase {
 			
 			try {
 				result = dao.createEmployee(e);
-				System.out.println(ConsoleColors.GREEN_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+				System.out.println(ConsoleColors.BANANA_YELLOW_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 
 			} catch (EmployeeException emp) {
 				result = emp.getMessage();
-				System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + result + ConsoleColors.RESET);
+				System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + result + ConsoleColors.RESET);
 			
 			}
 			
 		} catch (InputMismatchException i) {
-			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "Invalid Input Data Type" + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.BLUE_BOLD + "Invalid Input Data Type" + ConsoleColors.RESET);
 		}
 		
 

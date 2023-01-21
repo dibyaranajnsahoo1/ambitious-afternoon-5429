@@ -28,7 +28,7 @@ public class GPMMain {
 				+ "|  Press 2 to  Display Employee                                   |\r\n"
 				+ "|                                                                 |\r\n"
 				+ "|  Press 3 to Assign Employee to a Project                        |\r\n"
-				+ "|                                                                 |\r\n"
+				+ "|  Press 4 to Total Day/wage                                      |\r\n"
 				+ "|  Press 5 to LOGOUT / RETURN TO HOMEPAGE                         |\r\n"
 				+ "|                                                                 |\r\n"
 				+ "+-----------+-------------+------+-----+---------+----------------+"+ConsoleColors.RESET);
