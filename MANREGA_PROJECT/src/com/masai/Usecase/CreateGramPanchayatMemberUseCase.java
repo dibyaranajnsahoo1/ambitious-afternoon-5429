@@ -44,7 +44,7 @@ public class CreateGramPanchayatMemberUseCase {
 					break;
 				}
 				System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "Invalid Password Pattern" + ConsoleColors.RESET);
-				System.out.println(ConsoleColors.RED_ITALIC+"(Password must contain 8 characters and should have atleast 1 Upper Case, 1 Small Case, 1 Number)"+ ConsoleColors.RESET);
+				System.out.println(ConsoleColors.WHITE_ITALIC+"-Password contain 8 characters and should have atleast 1 Upper Case, 1 Small Case, 1 Number)"+ ConsoleColors.RESET);
 			}
 		
 			GramPanchayat g = new GramPanchayat();

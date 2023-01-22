@@ -20,15 +20,17 @@ public class GPMMain {
 		
 		
 		System.out.println(ConsoleColors.BLUE_BACKGROUND_BRIGHT+ConsoleColors.WHITE_BOLD_BRIGHT+"+-----------+-------------+------+-----+---------+----------------+\r\n"
-				+ "|       ||---Welcome to Gram Panchayat Member Home ---|||         |\r\n"
+				+ "|       |||---Welcome to Gram Panchayat Member ---|||             |\r\n"
 				+ "+   +======================================================+      +\r\n"
-				+ "|                                                                 |\r\n"
+				+ "|     (SELECT ONE)                                                |\r\n"
 				+ "|  Press 1 to Create a new Employee                               |\r\n"
 				+ "|                                                                 |\r\n"
 				+ "|  Press 2 to  Display Employee                                   |\r\n"
 				+ "|                                                                 |\r\n"
 				+ "|  Press 3 to Assign Employee to a Project                        |\r\n"
+				+ "|                                                                 |\r\n"
 				+ "|  Press 4 to Total Day/wage                                      |\r\n"
+				+ "|                                                                 |\r\n"
 				+ "|  Press 5 to LOGOUT / RETURN TO HOMEPAGE                         |\r\n"
 				+ "|                                                                 |\r\n"
 				+ "+-----------+-------------+------+-----+---------+----------------+"+ConsoleColors.RESET);
