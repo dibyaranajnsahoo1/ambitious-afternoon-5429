@@ -29,7 +29,8 @@ public static void open() throws InputMismatchException  {
 					+ "|Press 2 to LOGIN as Gram Panchayat Member (GPM)                  |\r\n"
 					+ "|                                                                 |\r\n"
 					+ "|Press 3 to EXIT.                                                 |\r\n"
-					+ "|                                                                 |\r\n"
+					+ "|                        "
+					+ "                                         |\r\n"
 					+ "|                                                                 |\r\n"
 					+ "|                                                                 |\r\n"
 					+ "+-----------+-------------+------+-----+---------+----------------+"+ConsoleColors.RESET);
@@ -135,7 +136,7 @@ public static void open() throws InputMismatchException  {
 				
 				
 			}else if(choice.equals("3")) {
-				System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "--CLOSED EXITED--" + ConsoleColors.RESET);
+				System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "--CLOSED--" + ConsoleColors.RESET);
 				System.exit(0);
 				
 			}else {

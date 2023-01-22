@@ -21,7 +21,7 @@ public class DisplayAllGramPayanchayatMemberUseCase {
 			List<GramPanchayat> gpmList = dao.displayAllGramPayanchayatMember();
 			
 			
-			System.out.println("------------" + ConsoleColors.PURPLE_BACKGROUND+ConsoleColors.YELLOW_BOLD_BRIGHT +"Table of all Gram Panchayat Member Present" + ConsoleColors.RESET+ "---------------");
+			System.out.println("------------" + ConsoleColors.PURPLE_BACKGROUND+ConsoleColors.YELLOW_BOLD_BRIGHT +"----Table of all Gram Panchayat Member Present----" + ConsoleColors.RESET+ "---------------");
 			
 			System.out.println("---------------------------------------------------------------------");
 			
@@ -39,6 +39,7 @@ public class DisplayAllGramPayanchayatMemberUseCase {
 				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"PASSWORD - "+g.getPassword()+ConsoleColors.RESET);
 				
 				System.out.println();
+				System.out.println("======================================");
 			}
 			
 			System.out.println("---------------------------------------------------------------------");

@@ -23,7 +23,6 @@ public class DisplayAllProjectUseCase {
 			
 			System.out.println("---------------------------------------------------------------------");
 			
-			System.out.printf("%7s  %16s %15s %17s",ConsoleColors.RED_BACKGROUND_BRIGHT+ ConsoleColors.BLACK_BOLD + "PID", "NAME", "COST", "DURATION" + ConsoleColors.RESET);
 			System.out.println();
 			
 			System.out.println();
@@ -38,6 +37,7 @@ public class DisplayAllProjectUseCase {
 				System.out.println(ConsoleColors.GREEN_BACKGROUND_BRIGHT+ConsoleColors.BLACK_BOLD+"DURATION - "+p.getDuration()+ConsoleColors.RESET);
 				
 				System.out.println();
+				System.out.println("======================================");
 			}
 			
 			System.out.println("---------------------------------------------------------------------");

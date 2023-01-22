@@ -171,7 +171,7 @@ public class BdoImplementation implements BdoDao {
 				String password = rs.getString("gpassword");
 				
 				
-				GramPanchayat gpmlist = new GramPanchayat(gpid, name,mail, address, phone, password);
+				GramPanchayat gpmlist = new GramPanchayat(gpid, name,address,mail, phone, password);
 				ListOfGpm.add(gpmlist);
 			}
 		} catch (SQLException e) {
@@ -289,7 +289,7 @@ public class BdoImplementation implements BdoDao {
 			throw new BdoException(e.getMessage());
 		}
 		
-		if(empList.size() ==0) {
+		if(empList.size() == 0) {
 			throw new EmployeeException(" --No Employee Found-- ");
 		}
 			
