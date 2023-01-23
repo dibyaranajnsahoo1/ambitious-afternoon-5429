@@ -44,8 +44,9 @@
 <img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/Screenshot%20(938).png">
 <h1> Screenshot of application 
 <hr>
-<h4>LOGIN BDO</h1>
-<img src="">
-<h4>LOGIN GPM</h1>
+
+<h4>LOGIN BDO
 <img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/Screenshot%20(939).png">
+<h4>LOGIN GPM
+<img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/GPM%20LIST.png">
 
