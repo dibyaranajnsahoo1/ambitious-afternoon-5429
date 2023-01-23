@@ -46,15 +46,16 @@
 <hr>
 
 <h4>LOGIN BDO</h4>
-<img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/Screenshot%20(939).png">
+<img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/Screenshot%20(939).png" width=50%>
 <h4>LOGIN GPM</h4>
 
 <img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/LOGIN%20GPM.png" width=50%>
 <hr>
 <h4>Gram panchayat member present</h4>
 
-<img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/GPM%20LIST.png">
+<img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/GPM%20LIST.png" width=50%>
 <hr>
-
+<h4>DETAILS OF EMPLOYEES</h4>
+<img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/DETAILS%20OF%20EMPLOYEES%20.png" width=50%>
 
 
