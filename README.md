@@ -37,4 +37,4 @@
 <br>
 <h1>MGNREGA ER DAIGRAM</h1>
 <br>
-
+<img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/Screenshot%20(937).png">
