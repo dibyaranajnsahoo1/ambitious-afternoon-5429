@@ -29,6 +29,7 @@
 <li>Display Employee.
 <li>Assign Employee to a Project.
 <li>Total Day/wage.
+
 <li>LOGOUT features have also.
 <h1>TECH-STACK USED</h1>
 <li>JAVA</li>
@@ -36,5 +37,8 @@
 <li>Github
 <br>
 <h1>MGNREGA ER DAIGRAM</h1>
-<br>
+<hr>
 <img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/Screenshot%20(937).png">
+<h1>FLOW CHART:
+<hr>
+<img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/Screenshot%20(938).png">
