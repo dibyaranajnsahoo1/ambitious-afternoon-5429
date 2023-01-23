@@ -42,3 +42,10 @@
 <h1>FLOW CHART:
 <hr>
 <img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/Screenshot%20(938).png">
+<h1> Screenshot of application 
+<hr>
+<h4>LOGIN BDO</h1>
+<img src="">
+<h4>LOGIN GPM</h1>
+<img src="https://github.com/dibyaranajnsahoo1/ambitious-afternoon-5429/blob/main/Screenshot%20(939).png">
+
